@@ -166,6 +166,7 @@ int main()
   int n , m ;
   cin>>n ;
   Node *head = NULL ;
+  Node* first , *second;
   int val;
   for (int i =0 ; i< n ;i++)
   {
@@ -208,10 +209,12 @@ int main()
  
   }
       second = head ;
-      head = addTwoLists( Node* first,  Node* second)
+      head = addTwoLists(  first,   second);
       print_list(head );
   
 }
 
    
+
+    
 
