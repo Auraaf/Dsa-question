@@ -1,3 +1,19 @@
+/*  the node structure is as follows
+
+struct Node {
+    int data;
+    Node *next;
+    Node *arb;
+
+    Node(int x) {
+        data = x;
+        next = NULL;
+        arb = NULL;
+    }
+};
+*/
+
+
 Node *copyList(Node *head) 
 {
       Node *temp , *nd ,*cur;
