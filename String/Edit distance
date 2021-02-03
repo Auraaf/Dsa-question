@@ -1,11 +1,11 @@
 /*
+	first have the recursion like this 
+	if (s[i] != t[j])
+	edit (i , j ) = 1 + min{ edit( i + 1 , j + 1)  , edit(i , j + 1) , edit(i +1 , j )}
+	else
+	edit( i , j ) = edit(i + 1 , j +1)
 
-first have the recursion like this 
-if (s[i] != t[j])
-edit (i , j ) = 1 + min{ edit( i + 1 , j + 1)  , edit(i , j + 1) , edit(i +1 , j )}
-else
-edit( i , j ) = edit(i + 1 , j +1)
-
+	
 */
 class Solution
 {
