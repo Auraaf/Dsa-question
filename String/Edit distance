@@ -1,0 +1,38 @@
+/*
+
+first have the recursion like this 
+if (s[i] != t[j])
+edit (i , j ) = 1 + min{ edit( i + 1 , j + 1)  , edit(i , j + 1) , edit(i +1 , j )}
+else
+edit( i , j ) = edit(i + 1 , j +1)
+
+*/
+class Solution
+{
+	public:
+		int editDistance(string s, string t)
+		{
+		    int n = s.size() ;
+		    int m = t.size() ;
+		    vector<int> vt(m + 1) ;
+		    vector<vector<int>> mtx (n + 1 , vt) ;
+		    
+		    for (int i = 0 ; i <= m ; i++)
+		    mtx[n][i] = m - i ;
+		    
+		     for (int i = 0 ; i <= n ; i++)
+		    mtx[i][m] = n - i ;
+           
+            for (int r = n -1 ;  r >= 0 ; r--)
+            for (int c = m - 1 ;c >= 0 ; c--)
+            {
+                if (s[r] == t[c])
+                mtx[r][c] = mtx[r+1][c+1] ;
+                else
+                {
+                    mtx[r][c] = 1 + min({mtx[r+1][c] , mtx[r][c+1] , mtx[r+1][c+1] }) ;
+                }
+            }
+            return mtx[0][0] ;
+		}
+};
