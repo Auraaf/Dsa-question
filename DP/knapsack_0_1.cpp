@@ -1,6 +1,6 @@
 # include<bits/stdc++.h>
 using namespace std ;
-
+// Checking the changes
 //*0. is subset with given sum sn exist
 vector<int> subSm(vector<int> arr , int sn , int n){
 
